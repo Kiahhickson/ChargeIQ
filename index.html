@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en"><head><title>Fleet overview | ChargeIQ</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="app-shell">
+
+<aside class="sidebar" aria-label="ChargeIQ navigation">
+  <div class="sidebar-brand">
+    <img src="https://www.bhp.com/-/media/project/bhp1ip/shared/fl-cta/bhp-footer-logo.svg?iar=0&hash=953A5EC6930303E6B71B0C002816262C" alt="BHP">
+    <div class="brand-copy"><div class="brand-name">ChargeIQ</div><div class="brand-sub">Fleet energy decision support</div></div>
+  </div>
+  <nav class="nav flex-column"><a class="nav-link active" href="index.html" aria-current="page"><i class="bi bi-grid-1x2-fill"></i><span>Fleet overview</span></a><a class="nav-link" href="recommendation.html"><i class="bi bi-lightning-charge-fill"></i><span>Energy decision</span></a><a class="nav-link" href="forecast.html"><i class="bi bi-graph-up-arrow"></i><span>Power forecast</span></a><a class="nav-link" href="handover.html"><i class="bi bi-arrow-left-right"></i><span>Shift handover</span></a><a class="nav-link" href="system.html"><i class="bi bi-activity"></i><span>System performance</span></a></nav>
+  <div class="sidebar-footer">Prototype only<br>Illustrative data</div>
+</aside>
+
+<div class="main">
+<header class="topbar">
+  <div class="d-flex flex-wrap justify-content-between align-items-center w-100 gap-3">
+    <div><div class="eyebrow">Jimblebar battery-electric trial</div><div class="fw-bold">Fleet overview</div></div>
+    <div class="d-flex align-items-center gap-3"><span class="status-pill status-watch"><i class="bi bi-cloud-slash"></i> 1 data issue</span>
+      <div class="text-end d-none d-sm-block"><div class="small fw-semibold">Day shift</div><div class="small text-secondary">Last updated 1:18 pm</div></div>
+      <div class="rounded-circle bg-dark text-white d-grid" style="width:38px;height:38px;place-items:center;font-weight:800">MC</div>
+    </div>
+  </div>
+</header>
+<main id="main" class="page">
+  <div class="mb-4"><h1>Fleet overview</h1><p class="lead-copy">Monitor by exception: start with predicted conflicts and trucks that need a decision, then use the map and supporting detail to understand why.</p></div>
+  
+<div class="row g-3 mb-4">
+  <div class="col-xl-3 col-md-6"><div class="card h-100"><div class="card-body d-flex justify-content-between"><div><div class="metric-label">Needs your attention</div><div class="metric-value">2 trucks</div><div class="metric-note">One action now, one due soon</div></div><div class="metric-icon"><i class="bi bi-exclamation-triangle-fill"></i></div></div></div></div>
+  <div class="col-xl-3 col-md-6"><div class="card h-100"><div class="card-body d-flex justify-content-between"><div><div class="metric-label">Site power</div><div class="metric-value">Within limit</div><div class="metric-note">Forecast peak 86 MW · limit 90 MW</div></div><div class="metric-icon"><i class="bi bi-speedometer2"></i></div></div></div></div>
+  <div class="col-xl-3 col-md-6"><div class="card h-100"><div class="card-body d-flex justify-content-between"><div><div class="metric-label">Energy actions planned</div><div class="metric-value">3</div><div class="metric-note">Next 2 hours</div></div><div class="metric-icon"><i class="bi bi-lightning-charge-fill"></i></div></div></div></div>
+  <div class="col-xl-3 col-md-6"><div class="card h-100"><div class="card-body d-flex justify-content-between"><div><div class="metric-label">Charging-related idle time</div><div class="metric-value">42 min</div><div class="metric-note">Current shift</div></div><div class="metric-icon"><i class="bi bi-clock-history"></i></div></div></div></div>
+</div>
+
+<div class="row g-4 mb-4">
+  <div class="col-xl-7">
+    <div class="card conflict-card h-100">
+      <div class="card-body">
+        <div class="d-flex justify-content-between gap-3 align-items-start">
+          <div>
+            <div class="eyebrow" style="color:#875000">Upcoming issue · about 34 minutes</div>
+            <h2 class="mt-1">Two trucks are forecast to need Static Charger 1 at the same time</h2>
+            <p class="mb-3">ChargeIQ has proposed a coordinated plan to avoid a charging queue while keeping site power within the trial limit.</p>
+          </div>
+          <span class="status-pill status-watch"><i class="bi bi-clock-fill"></i> Predicted conflict</span>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-6"><div class="outcome-box"><div class="label">Truck 5415</div><div class="value">Static Charger 1</div><div class="small text-secondary">Charge before next trip</div></div></div>
+          <div class="col-md-6"><div class="outcome-box"><div class="label">Truck 5408</div><div class="value">Dynamic charging Zone 2</div><div class="small text-secondary">No charging stop expected</div></div></div>
+        </div>
+        <div class="small text-secondary mt-3"><strong>Expected result:</strong> avoid a charger queue and keep forecast peak demand at 86 MW.</div>
+        <a class="btn btn-sm btn-bhp mt-3" href="recommendation.html">Review coordinated plan</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-5">
+    <div class="card changed-card h-100">
+      <div class="card-header">What changed since your last review</div>
+      <div class="card-body">
+        <ul class="changed-list">
+          <li>Truck 5415 returned from maintenance at 12:52 pm.</li>
+          <li>Dynamic charging Zone 2 is available again.</li>
+          <li>Forecast site peak fell from 93 MW to 86 MW after the proposed charging changes.</li>
+          <li>Truck 5417 has stopped sending current battery data.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card handover-card mb-4">
+  <div class="card-body d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <div><div class="eyebrow">Handover from previous shift</div><div class="fw-bold">1 item still needs follow-up</div><div class="small text-secondary">Truck 5415's static charge was delayed after a maintenance check. No unresolved safety restrictions.</div></div>
+    <a class="btn btn-sm btn-outline-dark" href="handover.html">Review handover</a>
+  </div>
+</div>
+
+<div class="row g-4">
+  <div class="col-xxl-8 col-xl-7">
+    <section class="card map-card h-100" aria-labelledby="map-title">
+      <div class="map-toolbar">
+        <div><h2 id="map-title" class="mb-1">Live fleet and charging map</h2><div class="data-freshness"><i class="bi bi-broadcast"></i> Truck locations refreshed 12 sec ago · power forecast refreshed 2 min ago</div></div>
+        <div class="d-flex gap-2 flex-wrap"><button class="btn btn-sm btn-light border"><i class="bi bi-truck me-1"></i> Battery-electric trucks</button><button class="btn btn-sm btn-light border"><i class="bi bi-lightning me-1"></i> Charging locations</button></div>
+      </div>
+      <div class="map-wrap"><div class="map-grid"></div>
+<svg class="map-svg" viewBox="0 0 1000 560" role="img" aria-label="Illustrative live fleet and charging map. Trucks 5415 and 5408 need attention. Static Charger 1 and Dynamic charging Zone 2 are available.">
+  <path class="route-main" d="M90 430 C210 370,240 270,350 255 S570 310,670 225 S820 130,930 170"/>
+  <path class="route-inner" d="M90 430 C210 370,240 270,350 255 S570 310,670 225 S820 130,930 170"/>
+  <path class="route-main" d="M350 255 C410 165,520 120,640 125"/>
+  <path class="route-inner" d="M350 255 C410 165,520 120,640 125"/>
+  <path class="route-dynamic" d="M570 300 C605 285,635 255,670 225"/>
+  <g class="site" transform="translate(85 430)"><circle r="24"/><text x="34" y="-4" class="map-label">Pit loading area</text><text x="34" y="12" class="map-sub">Current haul origin</text></g>
+  <g class="site" transform="translate(925 170)"><circle r="24"/><text x="-130" y="-4" class="map-label">Crusher 2</text><text x="-130" y="12" class="map-sub">Current destination</text></g>
+
+  <g class="asset" role="button" tabindex="0" aria-label="Static Charger 1, available" data-bs-toggle="offcanvas" data-bs-target="#chargerPanel" transform="translate(510 112)">
+    <circle class="charge-marker hit-ring" r="20"/><text class="marker-text" x="0" y="1">C1</text>
+    <text x="28" y="-3" class="map-label">Static Charger 1</text><text x="28" y="13" class="map-sub">Available</text>
+  </g>
+  <g class="asset" role="button" tabindex="0" aria-label="Dynamic charging Zone 2, available" data-bs-toggle="offcanvas" data-bs-target="#zonePanel" transform="translate(625 278)">
+    <circle class="dynamic-marker hit-ring" r="20"/><text class="marker-text" x="0" y="1">Z2</text>
+    <text x="28" y="-3" class="map-label">Dynamic charging Zone 2</text><text x="28" y="13" class="map-sub">Available</text>
+  </g>
+
+  <g class="asset" role="button" tabindex="0" aria-label="Truck 5408, 34 percent battery, review soon" data-bs-toggle="offcanvas" data-bs-target="#truck5408" transform="translate(430 274)">
+    <circle class="truck-watch hit-ring" r="25"/>
+<g transform="translate(-15,-11)">
+  <rect class="truck-body" x="0" y="3" width="24" height="14" rx="3"/>
+  <rect class="truck-body" x="20" y="6" width="10" height="11" rx="2"/>
+  <rect class="truck-window" x="22" y="8" width="5" height="4" rx="1"/>
+  <circle class="truck-wheel" cx="6" cy="19" r="4"/>
+  <circle class="truck-wheel" cx="23" cy="19" r="4"/>
+</g>
+<text x="-18" y="42" class="map-label">5408</text>
+  </g>
+  <g class="asset" role="button" tabindex="0" aria-label="Truck 5415, 27 percent battery, action needed" data-bs-toggle="offcanvas" data-bs-target="#truck5415" transform="translate(265 326)">
+    <circle class="truck-alert hit-ring" r="25"/>
+<g transform="translate(-15,-11)">
+  <rect class="truck-body" x="0" y="3" width="24" height="14" rx="3"/>
+  <rect class="truck-body" x="20" y="6" width="10" height="11" rx="2"/>
+  <rect class="truck-window" x="22" y="8" width="5" height="4" rx="1"/>
+  <circle class="truck-wheel" cx="6" cy="19" r="4"/>
+  <circle class="truck-wheel" cx="23" cy="19" r="4"/>
+</g>
+<text x="-18" y="42" class="map-label">5415</text>
+  </g>
+  <g class="asset" role="button" tabindex="0" aria-label="Truck 5411, 52 percent battery, no action needed" data-bs-toggle="offcanvas" data-bs-target="#truck5411" transform="translate(732 196)">
+    <circle class="truck-good hit-ring" r="25"/>
+<g transform="translate(-15,-11)">
+  <rect class="truck-body" x="0" y="3" width="24" height="14" rx="3"/>
+  <rect class="truck-body" x="20" y="6" width="10" height="11" rx="2"/>
+  <rect class="truck-window" x="22" y="8" width="5" height="4" rx="1"/>
+  <circle class="truck-wheel" cx="6" cy="19" r="4"/>
+  <circle class="truck-wheel" cx="23" cy="19" r="4"/>
+</g>
+<text x="-18" y="42" class="map-label">5411</text>
+  </g>
+  <g class="asset" role="button" tabindex="0" aria-label="Truck 5417, data temporarily unavailable" data-bs-toggle="offcanvas" data-bs-target="#truck5417" transform="translate(580 126)">
+    <circle class="status-neutral hit-ring" style="fill:#6c757d" r="25"/>
+<g transform="translate(-15,-11)">
+  <rect class="truck-body" x="0" y="3" width="24" height="14" rx="3"/>
+  <rect class="truck-body" x="20" y="6" width="10" height="11" rx="2"/>
+  <rect class="truck-window" x="22" y="8" width="5" height="4" rx="1"/>
+  <circle class="truck-wheel" cx="6" cy="19" r="4"/>
+  <circle class="truck-wheel" cx="23" cy="19" r="4"/>
+</g>
+<text x="-18" y="42" class="map-label">5417</text>
+  </g>
+</svg>
+
+        <div class="map-legend"><div class="fw-bold mb-1">Map key</div><div class="legend-row"><span class="legend-dot" style="background:#b42318"></span> Action needed</div><div class="legend-row"><span class="legend-dot" style="background:#d07b00"></span> Review soon</div><div class="legend-row"><span class="legend-dot" style="background:#198754"></span> No action needed</div><div class="legend-row"><span class="legend-dot" style="background:#6c757d"></span> Data unavailable</div></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="col-xxl-4 col-xl-5">
+    <section class="card attention h-100">
+      <div class="card-header d-flex justify-content-between"><span>Needs your attention</span><span class="badge rounded-pill text-bg-dark">2</span></div>
+      <div class="list-group list-group-flush">
+        <div class="list-group-item">
+          <div class="d-flex justify-content-between gap-2"><div><div class="truck-title">Truck 5415</div><div class="decision-title">Charge before the next trip</div></div><span class="status-pill status-urgent"><i class="bi bi-exclamation-circle-fill"></i> Action now</span></div>
+          <div class="meta mb-2">Battery now 27% · predicted after next trip 12%</div>
+          <p class="small mb-3">Static Charger 1 is available. Another trip would move the truck outside the agreed battery operating margin.</p>
+          <a class="btn btn-sm btn-bhp" href="recommendation.html">Review decision</a>
+        </div>
+        <div class="list-group-item">
+          <div class="d-flex justify-content-between gap-2"><div><div class="truck-title">Truck 5408</div><div class="decision-title">Energy decision due in 18 minutes</div></div><span class="status-pill status-watch"><i class="bi bi-clock-fill"></i> Review soon</span></div>
+          <div class="meta mb-2">Battery now 34% · predicted after next trip 19%</div>
+          <p class="small mb-3">Dynamic charging on the current route is recommended to avoid a charging stop.</p>
+          <a class="btn btn-sm btn-outline-bhp" href="recommendation.html">Review decision</a>
+        </div>
+        <div class="list-group-item bg-light">
+          <div class="small fw-bold"><i class="bi bi-check-circle-fill text-success me-1"></i> 1 truck needs no action</div>
+          <div class="meta">Truck 5411 remains on track.</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="alert alert-secondary border mt-4 d-flex gap-3 align-items-start" role="alert">
+  <i class="bi bi-cloud-slash fs-4"></i>
+  <div>
+    <div class="fw-bold">Current battery forecast unavailable for Truck 5417</div>
+    <div class="small">The latest truck data was received 6 minutes ago. ChargeIQ will not make a new energy recommendation until current data is restored. Use the existing fleet-management process for this truck in the meantime.</div>
+    <a href="system.html" class="alert-link">View system performance</a>
+  </div>
+</div>
+
+<section class="mt-4">
+  <div class="d-flex justify-content-between align-items-end gap-3 mb-2">
+    <div><h2 class="mb-1">Planned energy actions</h2><div class="small text-secondary">Decision state is visible from review through to completion.</div></div>
+    <a class="btn btn-sm btn-light border" href="forecast.html">View power forecast</a>
+  </div>
+  <div class="card"><div class="table-responsive"><table class="table mb-0">
+    <thead><tr><th>Truck</th><th>Planned action</th><th>When</th><th>Decision state</th><th>Expected idle time</th><th>Power impact</th></tr></thead>
+    <tbody>
+      <tr><td class="fw-bold">5408</td><td>Dynamic charging Zone 2</td><td>About 1:32 pm</td><td><span class="status-pill status-watch">Needs review</span></td><td>0 min</td><td>Within limit</td></tr>
+      <tr><td class="fw-bold">5415</td><td>Static Charger 1</td><td>Before next trip</td><td><span class="status-pill status-urgent">Needs review</span></td><td>18 min</td><td>Within limit</td></tr>
+      <tr><td class="fw-bold">5411</td><td>Continue current work</td><td>Now</td><td><span class="status-pill status-good">Approved</span></td><td>0 min</td><td>No change</td></tr>
+    </tbody>
+  </table></div></div>
+</section>
+
+<!-- Offcanvas panels -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="truck5408"><div class="offcanvas-header"><h2 class="offcanvas-title fs-5">Truck 5408</h2><button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button></div><div class="offcanvas-body">
+  <span class="status-pill status-watch mb-3">Review soon</span>
+  <dl class="row small"><dt class="col-7 text-secondary fw-normal">Battery now</dt><dd class="col-5 text-end fw-bold">34%</dd><dt class="col-7 text-secondary fw-normal">After next trip</dt><dd class="col-5 text-end fw-bold">19%</dd><dt class="col-7 text-secondary fw-normal">Current work</dt><dd class="col-5 text-end fw-bold">Pit → Crusher 2</dd><dt class="col-7 text-secondary fw-normal">Next energy action</dt><dd class="col-5 text-end fw-bold">Dynamic charging Zone 2</dd></dl>
+  <a class="btn btn-bhp w-100" href="recommendation.html">Review energy decision</a>
+</div></div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="truck5415"><div class="offcanvas-header"><h2 class="offcanvas-title fs-5">Truck 5415</h2><button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button></div><div class="offcanvas-body">
+  <span class="status-pill status-urgent mb-3">Action needed</span>
+  <dl class="row small"><dt class="col-7 text-secondary fw-normal">Battery now</dt><dd class="col-5 text-end fw-bold">27%</dd><dt class="col-7 text-secondary fw-normal">After next trip</dt><dd class="col-5 text-end fw-bold">12%</dd><dt class="col-7 text-secondary fw-normal">Recommended action</dt><dd class="col-5 text-end fw-bold">Static Charger 1</dd></dl>
+  <a class="btn btn-bhp w-100" href="recommendation.html">Review energy decision</a>
+</div></div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="truck5411"><div class="offcanvas-header"><h2 class="offcanvas-title fs-5">Truck 5411</h2><button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button></div><div class="offcanvas-body">
+  <span class="status-pill status-good mb-3">No action needed</span>
+  <dl class="row small"><dt class="col-7 text-secondary fw-normal">Battery now</dt><dd class="col-5 text-end fw-bold">52%</dd><dt class="col-7 text-secondary fw-normal">After next trip</dt><dd class="col-5 text-end fw-bold">37%</dd><dt class="col-7 text-secondary fw-normal">Current work</dt><dd class="col-5 text-end fw-bold">Pit → Crusher 1</dd></dl>
+</div></div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="truck5417"><div class="offcanvas-header"><h2 class="offcanvas-title fs-5">Truck 5417</h2><button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button></div><div class="offcanvas-body">
+  <span class="status-pill status-neutral mb-3">Data unavailable</span>
+  <p>The latest truck data was received 6 minutes ago. No new ChargeIQ recommendation will be made until current data is restored.</p>
+  <div class="alert alert-light border small">Continue using the existing fleet-management process for this truck.</div>
+  <a class="btn btn-outline-dark w-100" href="system.html">View data issue</a>
+</div></div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="chargerPanel"><div class="offcanvas-header"><h2 class="offcanvas-title fs-5">Static Charger 1</h2><button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button></div><div class="offcanvas-body">
+  <span class="status-pill status-good mb-3">Available</span>
+  <dl class="row small"><dt class="col-7 text-secondary fw-normal">Next planned truck</dt><dd class="col-5 text-end fw-bold">5415</dd><dt class="col-7 text-secondary fw-normal">Expected arrival</dt><dd class="col-5 text-end fw-bold">2:48 pm</dd><dt class="col-7 text-secondary fw-normal">Expected queue</dt><dd class="col-5 text-end fw-bold">None</dd></dl>
+</div></div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="zonePanel"><div class="offcanvas-header"><h2 class="offcanvas-title fs-5">Dynamic charging Zone 2</h2><button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button></div><div class="offcanvas-body">
+  <span class="status-pill status-good mb-3">Available</span>
+  <dl class="row small"><dt class="col-7 text-secondary fw-normal">Next planned truck</dt><dd class="col-5 text-end fw-bold">5408</dd><dt class="col-7 text-secondary fw-normal">Expected arrival</dt><dd class="col-5 text-end fw-bold">1:32 pm</dd><dt class="col-7 text-secondary fw-normal">Current restriction</dt><dd class="col-5 text-end fw-bold">None</dd></dl>
+</div></div>
+
+  <div class="prototype-note">Prototype only. All operational values are illustrative and are not BHP operational data.</div>
+</main>
+</div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el));
+document.querySelectorAll('svg [role="button"]').forEach(el=>{
+  el.addEventListener('keydown',e=>{
+    if(e.key==='Enter' || e.key===' '){ e.preventDefault(); el.dispatchEvent(new MouseEvent('click',{bubbles:true})); }
+  });
+});
+</script>
+
+</body></html>
